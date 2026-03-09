@@ -1,0 +1,299 @@
+/* --- 1. IMPORTAÇÃO DE FONTE MODERNA DO GOOGLE --- */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
+
+/* --- 2. VARIÁVEIS DE CORES E PADRÕES (Design System) --- */
+:root {
+  --bg-fundo: #f0f2f5;
+  --bg-cartao: #ffffff;
+  --texto-principal: #1e293b;
+  --texto-secundario: #373f4b;
+  --cor-primaria: #381c85; /* Azul vibrante */
+  --cor-primaria-hover: #20176b;
+  --cor-borda: #e2e8f0;
+  --cor-insta: #e1306c; /* Rosa do Instagram */
+  --sombra-leve: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --sombra-forte: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
+  --raio-borda: 12px;
+}
+
+/* --- 3. RESET E CONFIGURAÇÕES GERAIS --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: var(--bg-fundo);
+  color: var(--texto-principal);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Garante que o rodapé fique lá embaixo */
+}
+
+/* --- 4. CABEÇALHO (Visual Moderno com Degradê) --- */
+header {
+  background: linear-gradient(125deg, #1e293b 0%, #611091 100%);
+  color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+  box-shadow: var(--sombra-forte);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: -1px;
+}
+
+header p {
+  color: #cbd5e1;
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+  font-weight: 300;
+}
+
+/* --- 5. BARRA DE PESQUISA --- */
+#barraPesquisa {
+  width: 100%;
+  max-width: 600px;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 50px; /* Formato de pílula */
+  font-size: 1.1rem;
+  box-shadow: var(--sombra-leve);
+  transition: all 0.3s ease;
+  color: var(--texto-principal);
+}
+
+#barraPesquisa:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.3); /* Efeito de brilho ao clicar */
+  transform: scale(1.02);
+}
+
+/* --- 6. ÁREA DOS CARTÕES (Grid Inteligente) --- */
+main {
+  padding: 3rem 2rem;
+  max-width: 95%; /* Usa quase toda a tela */
+  margin: 0 auto;
+  display: grid;
+  /* Responsividade automática: cria colunas conforme o espaço */
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+  flex: 1; /* Empurra o rodapé para baixo se tiver pouco conteúdo */
+}
+
+/* --- 7. DESIGN DOS CARTÕES --- */
+.cartao-materia {
+  background-color: var(--bg-cartao);
+  padding: 2rem;
+  border-radius: var(--raio-borda);
+  border: 1px solid var(--cor-borda);
+  box-shadow: var(--sombra-leve);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.cartao-materia:hover {
+  transform: translateY(-8px); /* Levanta o cartão */
+  box-shadow: var(--sombra-forte);
+  border-color: #cbd5e1;
+}
+
+.cartao-materia h2 {
+  color: var(--cor-primaria);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 2px solid var(--bg-fundo);
+}
+
+.cartao-materia > p {
+  margin-bottom: 1.5rem;
+  color: var(--texto-secundario);
+  font-size: 0.95rem;
+}
+
+/* --- 8. SANFONA (Details e Summary) --- */
+details {
+  background-color: #f8fafc;
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+summary {
+  padding: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--texto-principal);
+  list-style: none; /* Remove a setinha padrão */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Esconde a setinha padrão em navegadores antigos */
+summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Cria um ícone de "+" e "-" personalizado */
+summary::after {
+  content: "+";
+  font-size: 1.5rem;
+  color: var(--cor-primaria);
+  font-weight: 400;
+  transition: transform 0.3s ease;
+}
+
+details[open] summary::after {
+  content: "−";
+  transform: rotate(180deg);
+}
+
+details[open] summary {
+  border-bottom: 1px solid var(--cor-borda);
+  color: var(--cor-primaria);
+}
+
+.conteudo-unidade {
+  padding: 1.5rem;
+  font-size: 0.95rem;
+  color: var(--texto-secundario);
+  background-color: #ffffff;
+}
+
+/* --- 9. BLOCOS DE CÓDIGO (Estilo Terminal) --- */
+pre {
+  background-color: #0f172a; /* Azul muito escuro */
+  color: #e2e8f0; /* Texto claro */
+  padding: 1.2rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin-top: 1rem;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.9rem;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+  border-left: 4px solid var(--cor-primaria);
+}
+
+pre::-webkit-scrollbar {
+  height: 8px;
+}
+pre::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 4px;
+}
+
+/* --- 10. RODAPÉ E EQUIPE --- */
+footer {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: var(--texto-secundario);
+  font-size: 0.9rem;
+  border-top: 1px solid var(--cor-borda);
+  margin-top: 3rem;
+  background-color: #ffffff;
+}
+
+.rodape-autores {
+  display: flex;
+  flex-wrap: wrap; /* Se a tela for pequena, joga os nomes pra baixo */
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.link-insta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--texto-secundario);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  background-color: var(--bg-fundo);
+}
+
+/* Efeito ao passar o mouse (Cor do Instagram e levanta) */
+.link-insta:hover {
+  color: var(--cor-insta);
+  background-color: #fff0f5; /* Fundo rosinha bem claro */
+  transform: translateY(-3px);
+  box-shadow: var(--sombra-leve);
+}
+
+/* Garante que o ícone acompanhe a cor do texto */
+.link-insta svg {
+  stroke: currentColor;
+}
+
+/* =========================================================
+   11. RESPONSIVIDADE (Celular, PC e TV)
+   ========================================================= */
+
+/* Para Celulares (Telas pequenas) */
+@media (max-width: 600px) {
+  header {
+    padding: 3rem 1rem;
+  }
+  header h1 {
+    font-size: 2rem;
+  }
+  main {
+    padding: 2rem 1rem;
+    grid-template-columns: 1fr; /* 1 coluna apenas */
+  }
+  .cartao-materia {
+    padding: 1.5rem;
+  }
+  .rodape-autores {
+    flex-direction: column; /* Nomes um embaixo do outro no celular */
+    gap: 1rem;
+  }
+}
+
+/* Para TVs e Monitores Ultra Wide (Telas gigantes) */
+@media (min-width: 1920px) {
+  body {
+    font-size: 1.2rem; /* Aumenta a fonte geral */
+  }
+  header {
+    padding: 6rem 2rem;
+  }
+  header h1 {
+    font-size: 4rem;
+  }
+  #barraPesquisa {
+    max-width: 800px;
+    font-size: 1.5rem;
+    padding: 1.5rem 2rem;
+  }
+  main {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(450px, 1fr)
+    ); /* Cartões mais largos */
+    gap: 3rem;
+    max-width: 90%;
+  }
+  .cartao-materia h2 {
+    font-size: 2rem;
+  }
+  pre {
+    font-size: 1.1rem;
+  }
+}

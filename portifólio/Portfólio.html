@@ -1,0 +1,1322 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Meus Estudos</h1>
+      <p>Minha colinha pessoal de matérias.</p>
+      <input
+        type="text"
+        id="barraPesquisa"
+        placeholder="Pesquisar assunto (ex: Flexbox, SQL, Matrizes, Java, ArrayList)..."
+      />
+    </header>
+
+    <main id="containerMaterias">
+      <!-- ======================================================= -->
+      <!-- MATÉRIA 1: Fundamentos de Desenvolvimento Web           -->
+      <!-- ======================================================= -->
+      <div class="cartao-materia">
+        <h2>Fundamentos de Desenvolvimento Web</h2>
+        <p>
+          <strong>Resumo:</strong> Base teórica e prática sobre a web,
+          estruturação com HTML e estilização com CSS.
+        </p>
+
+        <details>
+          <summary>Internet e Arquitetura Cliente-Servidor</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> A Internet é a rede física. A Web é o
+              serviço que roda nela. A arquitetura funciona com um
+              <strong>Cliente</strong> (navegador) pedindo informações para um
+              <strong>Servidor</strong> (computador que hospeda o site).
+            </p>
+            <p>
+              <strong>2 Níveis:</strong> Cliente direto no Servidor.
+              <strong>3 Níveis:</strong> Cliente -> Servidor de Aplicação ->
+              Banco de Dados.
+            </p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Introdução ao HTML e DOM</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> HTML não é linguagem de programação, é
+              marcação. O DOM é a árvore que o navegador cria para ler o HTML.
+            </p>
+            <p><strong>Exemplo de Estrutura Básica:</strong></p>
+            <pre><code>&lt;!doctype html&gt; 
+&lt;html lang="pt_br"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Olá mundo!&lt;/h1&gt;
+    &lt;p&gt;Essa é a estrutura base html-5&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>Listas Ordenadas e Não Ordenadas</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> Usadas para organizar informações.
+              <b>&lt;ul&gt;</b> para listas com bolinhas, <b>&lt;ol&gt;</b> para
+              listas numeradas.
+            </p>
+            <p><strong>Exemplo:</strong></p>
+            <pre><code>&lt;ul&gt;
+    &lt;li&gt;Item sem número&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+    &lt;li&gt;Primeiro passo&lt;/li&gt;
+    &lt;li&gt;Segundo passo&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>Tabulação (Tabelas)</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> Criação de tabelas de dados usando
+              linhas (tr) e colunas/células (td).
+            </p>
+            <p><strong>Exemplo:</strong></p>
+            <pre><code>&lt;table border="1"&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Nome&lt;/th&gt;
+        &lt;th&gt;Idade&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;João&lt;/td&gt;
+        &lt;td&gt;25&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>Mídias e Hiperlinks</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> Como inserir imagens, vídeos e criar
+              links para outras páginas.
+            </p>
+            <p><strong>Exemplo:</strong></p>
+            <pre><code>&lt;!-- Imagem --&gt;
+&lt;img src="foto.jpg" alt="Descrição da foto"&gt;
+
+&lt;!-- Link --&gt;
+&lt;a href="https://google.com"&gt;Ir para o Google&lt;/a&gt;
+
+&lt;!-- Vídeo --&gt;
+&lt;video controls&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+&lt;/video&gt;</code></pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>CSS e Box Model</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> CSS estiliza a página. O
+              <strong>Box Model</strong> diz que todo elemento é uma caixa com:
+              Margin (espaço fora), Border (borda), Padding (espaço dentro) e o
+              Conteúdo.
+            </p>
+            <p><strong>Exemplo:</strong></p>
+            <pre><code>/* Seleciona todos os parágrafos */
+p {
+    color: blue;
+    margin: 20px; /* Afasta dos outros elementos */
+    padding: 10px; /* Espaço interno */
+    border: 1px solid black;
+    display: block; /* Ocupa a linha toda */
+}</code></pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>Flexbox</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> Sistema de layout unidimensional (linha
+              ou coluna) para alinhar itens facilmente.
+            </p>
+            <p><strong>Exemplo:</strong></p>
+            <pre><code>.container-pai {
+    display: flex;
+    justify-content: center; /* Centraliza na horizontal */
+    align-items: center; /* Centraliza na vertical */
+    gap: 10px; /* Espaço entre os filhos */
+}</code></pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>Formulários</summary>
+          <div class="conteudo-unidade">
+            <p><strong>Conceito:</strong> Capturar dados do usuário.</p>
+            <p><strong>Exemplo:</strong></p>
+            <pre><code>&lt;form&gt;
+    &lt;label for="nome"&gt;Seu Nome:&lt;/label&gt;
+    &lt;input type="text" id="nome" placeholder="Digite aqui"&gt;
+    &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>Grid System</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> Sistema de layout bidimensional (linhas
+              e colunas ao mesmo tempo).
+            </p>
+            <p><strong>Exemplo:</strong></p>
+            <pre><code>.meu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
+    gap: 15px;
+}</code></pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>Múltiplas Páginas e Responsividade</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> Responsividade é fazer o site se
+              adaptar ao celular usando <code>@media</code>. Múltiplas páginas
+              são arquivos HTML separados ligados por links.
+            </p>
+            <p><strong>Exemplo:</strong></p>
+            <pre><code>/* Se a tela for menor que 600px, muda a cor */
+@media (max-width: 600px) {
+    body {
+        background-color: lightgray;
+    }
+}</code></pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>Projeto Prático</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> Etapas finais onde modelamos o projeto
+              (Wireframes/Figma), codificamos na prática juntando HTML e CSS, e
+              apresentamos o resultado final.
+            </p>
+          </div>
+        </details>
+      </div>
+
+      <!-- ======================================================= -->
+      <!-- MATÉRIA 2: Programação Orientada a Objetos (POO)        -->
+      <!-- ======================================================= -->
+      <div class="cartao-materia">
+        <h2>Programação Orientada a Objetos (POO)</h2>
+        <p>
+          <strong>Resumo:</strong> Paradigma de programação focado em
+          representar o mundo real através de Objetos, Classes e seus
+          relacionamentos.
+        </p>
+
+        <details>
+          <summary>Teoria, Estruturada vs POO e Variáveis vs Objetos</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> Na programação estruturada, o código é
+              uma sequência de funções (ações). Na POO, o código é um conjunto
+              de <strong>Objetos</strong> que interagem entre si. Variáveis
+              comuns guardam apenas um valor (ex: <code>int idade = 20;</code>).
+              Objetos guardam <strong>Atributos</strong> (características) e
+              <strong>Métodos</strong> (ações/comportamentos) juntos.
+            </p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Pilares da POO</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> A base da POO se resume em 4 regras
+              fundamentais:
+            </p>
+            <ul>
+              <li>
+                <strong>Abstração:</strong> Pegar algo do mundo real e trazer só
+                o que importa para o código.
+              </li>
+              <li>
+                <strong>Encapsulamento:</strong> Proteger os dados, escondendo o
+                que não precisa ser visto de fora.
+              </li>
+              <li>
+                <strong>Herança:</strong> Uma classe "filha" herda
+                características de uma classe "mãe".
+              </li>
+              <li>
+                <strong>Polimorfismo:</strong> Objetos diferentes podem
+                responder ao mesmo comando de formas diferentes.
+              </li>
+            </ul>
+          </div>
+        </details>
+
+        <details>
+          <summary>Classe Vazia e Atributos</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> A <strong>Classe</strong> é o molde (a
+              planta da casa). O <strong>Objeto</strong> é a casa construída.
+              Atributos são as características desse molde.
+            </p>
+            <p><strong>Exemplo:</strong></p>
+            <pre><code>// Criando a classe (O Molde)
+public class Carro {
+    // Atributos (Características)
+    String cor;
+    String modelo;
+    int ano;
+}</code></pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>Métodos (Funções) e Construtor</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> Métodos são as ações que o objeto faz.
+              O <strong>Construtor</strong> é um método especial chamado
+              automaticamente quando o objeto nasce (é instanciado com
+              <code>new</code>).
+            </p>
+            <p><strong>Exemplo:</strong></p>
+            <pre><code>public class Carro {
+    String modelo;
+
+    // Método Construtor (Tem o mesmo nome da classe)
+    public Carro(String modeloEscolhido) {
+        this.modelo = modeloEscolhido;
+    }
+
+    // Método comum (Ação)
+    public void acelerar() {
+        System.out.println("Vrum vrum!");
+    }
+}
+
+// Criando o objeto na prática:
+Carro meuCarro = new Carro("Fusca");
+meuCarro.acelerar();</code></pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>Encapsulamento, Getters e Setters</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> Para proteger os dados
+              (Encapsulamento), deixamos os atributos como
+              <code>private</code> (privados). Para acessá-los ou alterá-los de
+              forma segura, usamos métodos públicos chamados
+              <strong>Get</strong> (pegar) e <strong>Set</strong> (alterar).
+            </p>
+            <p><strong>Exemplo:</strong></p>
+            <pre><code>public class ContaBancaria {
+    // Privado: Ninguém de fora mexe direto aqui
+    private double saldo;
+
+    // Setter: Regra para alterar o saldo
+    public void setSaldo(double valor) {
+        if(valor > 0) {
+            this.saldo = valor;
+        }
+    }
+
+    // Getter: Regra para ver o saldo
+    public double getSaldo() {
+        return this.saldo;
+    }
+}</code></pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>Herança</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> Permite criar uma nova classe
+              aproveitando o código de uma classe que já existe. Usa-se a
+              palavra <code>extends</code>.
+            </p>
+            <p><strong>Exemplo:</strong></p>
+            <pre><code>// Classe Mãe
+public class Animal {
+    public void comer() {
+        System.out.println("Comendo...");
+    }
+}
+
+// Classe Filha (Herda de Animal)
+public class Cachorro extends Animal {
+    public void latir() {
+        System.out.println("Au au!");
+    }
+}</code></pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>Polimorfismo</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> "Muitas formas". É quando a classe
+              filha reescreve (sobrescreve) um método da classe mãe para fazer a
+              mesma ação, mas do seu próprio jeito.
+            </p>
+            <p><strong>Exemplo:</strong></p>
+            <pre><code>public class Animal {
+    public void fazerSom() {
+        System.out.println("Som de animal");
+    }
+}
+
+public class Gato extends Animal {
+    // Reescrevendo o método da mãe
+    @Override
+    public void fazerSom() {
+        System.out.println("Miau!");
+    }
+}</code></pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>Bibliotecas</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> Bibliotecas são pacotes de códigos
+              prontos feitos por outros programadores que importamos para
+              facilitar a vida.
+            </p>
+          </div>
+        </details>
+      </div>
+
+      <!-- ======================================================= -->
+      <!-- MATÉRIA 3: Banco de Dados I                             -->
+      <!-- ======================================================= -->
+      <div class="cartao-materia">
+        <h2>Banco de Dados I</h2>
+        <p>
+          <strong>Resumo:</strong> Fundamentos de armazenamento de dados,
+          modelagem (MER/DER), normalização e comandos SQL (DDL, DML, DQL).
+        </p>
+
+        <details>
+          <summary>Conceitos Básicos e SGBD</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Dados vs Informação:</strong> Dado é um fato bruto (ex:
+              "25"). Informação é o dado com significado (ex: "Idade: 25").
+              Conhecimento é a aplicação da informação.
+            </p>
+            <p>
+              <strong>SGBD:</strong> Sistema Gerenciador de Banco de Dados. É o
+              software que gerencia os dados (ex: MySQL, PostgreSQL, Oracle).
+            </p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Modelagem: MER, DER e Cardinalidade</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>MER (Modelo Entidade Relacionamento):</strong> É a ideia
+              teórica de como as coisas se conectam.
+            </p>
+            <p>
+              <strong>DER (Diagrama):</strong> É o desenho visual dessa ideia
+              (caixinhas e linhas).
+            </p>
+            <p>
+              <strong>Cardinalidade:</strong> Define como as tabelas se
+              relacionam:
+            </p>
+            <ul>
+              <li>
+                <strong>1:1</strong> (Um para Um) - Ex: Uma pessoa tem um CPF.
+              </li>
+              <li>
+                <strong>1:N</strong> (Um para Muitos) - Ex: Um cliente faz
+                vários pedidos.
+              </li>
+              <li>
+                <strong>N:M</strong> (Muitos para Muitos) - Ex: Vários alunos
+                cursam várias disciplinas.
+              </li>
+            </ul>
+          </div>
+        </details>
+
+        <details>
+          <summary>Chave Primária (PK) e Estrangeira (FK)</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Chave Primária (Primary Key):</strong> Identificador ÚNICO
+              de uma linha na tabela (ex: ID, CPF). Não pode repetir.
+            </p>
+            <p>
+              <strong>Chave Estrangeira (Foreign Key):</strong> É a Chave
+              Primária de uma tabela que foi parar em outra tabela para criar um
+              relacionamento entre elas.
+            </p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Normalização (As 3 Formas Normais)</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> Regras para evitar repetição de dados e
+              inconsistências.
+            </p>
+            <ul>
+              <li>
+                <strong>1FN:</strong> Os dados devem ser atômicos (não pode ter
+                múltiplos valores na mesma célula, ex: dois telefones juntos).
+              </li>
+              <li>
+                <strong>2FN:</strong> Estar na 1FN e todos os atributos devem
+                depender de TODA a chave primária.
+              </li>
+              <li>
+                <strong>3FN:</strong> Estar na 2FN e nenhum atributo pode
+                depender de outro atributo que não seja a chave primária (sem
+                dependência transitiva).
+              </li>
+            </ul>
+          </div>
+        </details>
+
+        <details>
+          <summary>Ferramentas (MySQL, Workbench, phpMyAdmin)</summary>
+          <div class="conteudo-unidade">
+            <p><strong>MySQL:</strong> É o SGBD (o motor do banco).</p>
+            <p>
+              <strong>Workbench / phpMyAdmin:</strong> São interfaces gráficas
+              (telas bonitas) para você não precisar digitar tudo na tela preta
+              do terminal (Command Line).
+            </p>
+          </div>
+        </details>
+
+        <details>
+          <summary>SQL - DDL (Definição de Dados)</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> Comandos para criar e alterar a
+              ESTRUTURA do banco (Tabelas, Colunas).
+            </p>
+            <p><strong>Exemplo (CREATE, ALTER, DROP):</strong></p>
+            <pre><code>-- Criar uma tabela
+CREATE TABLE Clientes (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100),
+    idade INT
+);
+
+-- Alterar tabela (Adicionar coluna)
+ALTER TABLE Clientes ADD email VARCHAR(50);
+
+-- Excluir a tabela inteira
+DROP TABLE Clientes;</code></pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>SQL - DML (Manipulação de Dados)</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> Comandos para mexer nos DADOS que estão
+              dentro das tabelas.
+            </p>
+            <p><strong>Exemplo (INSERT, UPDATE, DELETE):</strong></p>
+            <pre><code>-- Inserir um dado novo
+INSERT INTO Clientes (nome, idade) 
+VALUES ('João', 25);
+
+-- Atualizar um dado existente
+UPDATE Clientes 
+SET idade = 26 
+WHERE nome = 'João';
+
+-- Deletar um dado (CUIDADO: Sempre use WHERE!)
+DELETE FROM Clientes 
+WHERE id = 1;</code></pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>SQL - DQL (Consulta de Dados)</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> Comando para pesquisar e visualizar os
+              dados (O famoso SELECT).
+            </p>
+            <p><strong>Exemplo (SELECT):</strong></p>
+            <pre><code>-- Buscar todas as colunas de todos os clientes
+SELECT * FROM Clientes;
+
+-- Buscar apenas o nome dos clientes maiores de 18 anos
+SELECT nome FROM Clientes 
+WHERE idade > 18;</code></pre>
+          </div>
+        </details>
+      </div>
+
+      <!-- ======================================================= -->
+      <!-- MATÉRIA 4: Lógica de Programação                        -->
+      <!-- ======================================================= -->
+      <div class="cartao-materia">
+        <h2>Lógica de Programação</h2>
+        <p>
+          <strong>Resumo:</strong> A base do raciocínio computacional. Criação
+          de algoritmos, variáveis, laços de repetição e decisões usando
+          Pseudolinguagem (Portugol) e Java.
+        </p>
+
+        <details>
+          <summary>Introdução, Lógica e Diagrama de Blocos</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> Lógica é a organização do pensamento
+              para resolver um problema (Algoritmo). O computador executa passos
+              em <strong>sequência</strong>.
+            </p>
+            <p>
+              <strong>Diagrama de Blocos:</strong> Representação visual do
+              algoritmo usando formas geométricas (ex: losango para decisão,
+              retângulo para processamento).
+            </p>
+            <p>
+              <strong>Paradigmas:</strong> Estruturada (foco em
+              funções/sequência) vs Orientada a Objetos (foco em objetos do
+              mundo real).
+            </p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Variáveis, Constantes e Operadores</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> <strong>Variável</strong> guarda um
+              valor que pode mudar durante o programa.
+              <strong>Constante</strong> guarda um valor fixo.
+            </p>
+            <p>
+              <strong>Operadores:</strong> Aritméticos (+, -, *, /) e Lógicos
+              (E, OU, NÃO).
+            </p>
+            <p><strong>Exemplo (Portugol):</strong></p>
+            <pre><code>algoritmo "ExemploVariaveis"
+var
+   idade: inteiro
+   nome: caractere
+   PI: real // Constante
+inicio
+   idade &lt;- 20
+   nome &lt;- "Maria"
+   PI &lt;- 3.14
+   escreval("O nome é: ", nome)
+fimalgoritmo</code></pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>Estruturas de Decisão (Se / Escolha)</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> O programa toma caminhos diferentes
+              dependendo de uma condição (Lógica Booleana: Verdadeiro ou Falso).
+            </p>
+            <p><strong>Exemplo (Portugol):</strong></p>
+            <pre><code>// Estrutura SE / SENAO
+se (idade >= 18) entao
+   escreval("Maior de idade")
+senao
+   escreval("Menor de idade")
+fimse
+
+// Estrutura ESCOLHA / CASO
+escolha (opcao)
+   caso 1
+      escreval("Você escolheu 1")
+   caso 2
+      escreval("Você escolheu 2")
+   outrocaso
+      escreval("Opção inválida")
+fimescolha</code></pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>Estruturas de Repetição (Enquanto / Repita)</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> Usado para executar um bloco de código
+              várias vezes sem precisar reescrever.
+            </p>
+            <ul>
+              <li>
+                <strong>Enquanto (Teste no início):</strong> Só entra no laço se
+                a condição for verdadeira.
+              </li>
+              <li>
+                <strong>Repita (Teste no fim):</strong> Executa pelo menos uma
+                vez antes de testar a condição.
+              </li>
+            </ul>
+            <p><strong>Exemplo (Portugol):</strong></p>
+            <pre><code>// ENQUANTO (Teste no início)
+contador &lt; - 1
+enquanto (contador &lt;= 5) faca
+   escreval(contador)
+   contador &lt; - contador + 1
+fimenquanto
+
+// REPITA (Teste no fim)
+contador &lt; - 1
+repita
+   escreval(contador)
+   contador &lt; - contador + 1
+ate (contador > 5)</code></pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>Vetores e Matrizes</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> São variáveis compostas que guardam
+              vários valores do mesmo tipo.
+            </p>
+            <p>
+              <strong>Vetor:</strong> Unidimensional (uma linha, como uma
+              lista).<br />
+              <strong>Matriz:</strong> Bidimensional (linhas e colunas, como uma
+              tabela).
+            </p>
+            <p><strong>Exemplo (Portugol):</strong></p>
+            <pre><code>var
+   // Vetor de 5 posições
+   notas: vetor [1..5] de real
+   
+   // Matriz de 3 linhas e 3 colunas
+   tabuleiro: vetor [1..3, 1..3] de inteiro
+inicio
+   notas[1] &lt;- 8.5
+   tabuleiro[1, 2] &lt;- 9
+fimalgoritmo</code></pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>Apresentação e Sintaxe Java</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> Java é uma linguagem fortemente tipada,
+              orientada a objetos e multiplataforma (roda na JVM - Java Virtual
+              Machine). O lema é "Escreva uma vez, rode em qualquer lugar".
+            </p>
+            <p>
+              <strong>Sintaxe Básica:</strong> Todo código Java precisa estar
+              dentro de uma <code>class</code>. O ponto de partida do programa é
+              o método <code>main</code>.
+            </p>
+            <p><strong>Exemplo (Java):</strong></p>
+            <pre><code>// A classe deve ter o mesmo nome do arquivo
+public class MeuPrograma {
+    
+    // Método principal (Onde a execução começa)
+    public static void main(String[] args) {
+        
+        // Imprimindo na tela
+        System.out.println("Olá, Mundo!");
+
+        // Declaração de variáveis (Tipo nome = valor;)
+        int idade = 25;
+        double altura = 1.75;
+        String nome = "João";
+        boolean gostaDeCafe = true;
+    }
+}</code></pre>
+          </div>
+        </details>
+      </div>
+
+      <!-- ======================================================= -->
+      <!-- MATÉRIA 5: Linguagem de Programação (Java Avançado)     -->
+      <!-- ======================================================= -->
+      <div class="cartao-materia">
+        <h2>Linguagem de Programação</h2>
+        <p>
+          <strong>Resumo:</strong> Aprofundamento na linguagem Java, estruturas
+          de controle, coleções, versionamento e conexão com Banco de Dados.
+        </p>
+
+        <details>
+          <summary>Variáveis, Escopo e Operadores</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Tipos Primitivos:</strong> <code>int</code> (inteiro),
+              <code>double</code> (decimal),
+              <code>boolean</code> (verdadeiro/falso), <code>char</code> (um
+              caractere).
+            </p>
+            <p>
+              <strong>Escopo (Global vs Local):</strong> Variável local só
+              existe dentro do bloco onde foi criada (ex: dentro de um método).
+              Variável global (atributo de classe) pode ser vista por toda a
+              classe.
+            </p>
+            <p>
+              <strong>Operadores:</strong> Aritméticos (<code>+ - * / %</code>),
+              Relacionais (<code>== != > < >= <=</code>) e Lógicos (<code
+                >&&</code
+              >
+              para E, <code>||</code> para OU).
+            </p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Estruturas de Seleção e Repetição</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Seleção:</strong> <code>if/else</code> (Se/Senão) e
+              <code>switch/case</code> (Escolha/Caso).
+            </p>
+            <p>
+              <strong>Repetição:</strong> <code>for</code> (Para),
+              <code>while</code> (Enquanto) e
+              <code>do/while</code> (Faça/Enquanto).
+            </p>
+            <p><strong>Exemplo (Java):</strong></p>
+            <pre><code>// Condicional IF
+if (nota >= 7) {
+    System.out.println("Aprovado");
+} else {
+    System.out.println("Reprovado");
+}
+
+// Laço FOR (Início; Condição; Incremento)
+for (int i = 1; i <= 5; i++) {
+    System.out.println("Contagem: " + i);
+}</code></pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>Vetores (Arrays)</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> Estrutura de tamanho FIXO que guarda
+              vários valores do mesmo tipo. A primeira posição é sempre o índice
+              <code>0</code>.
+            </p>
+            <p><strong>Exemplo (Java):</strong></p>
+            <pre><code>// Criando um vetor de 3 posições
+int[] numeros = new int[3];
+numeros[0] = 10;
+numeros[1] = 20;
+numeros[2] = 30;
+
+// Acessando o valor
+System.out.println(numeros[1]); // Imprime 20</code></pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>Funções e Passagem de Parâmetros</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Funções/Procedimentos:</strong> Em Java chamamos de
+              Métodos. Se retorna algo, tem um tipo (ex: <code>int</code>). Se
+              não retorna, usamos <code>void</code>.
+            </p>
+            <p>
+              <strong>Passagem por Valor vs Referência:</strong> No Java, TUDO é
+              passado por valor (uma cópia). Porém, quando passamos um Objeto, o
+              valor copiado é a "referência" (o controle remoto) dele. Se
+              alterar o objeto dentro do método, altera o original.
+            </p>
+            <p><strong>Exemplo (Java):</strong></p>
+            <pre><code>// Método que soma e RETORNA um valor
+public int somar(int a, int b) {
+    return a + b;
+}
+
+// Método VOID (só executa, não retorna nada)
+public void imprimirNome(String nome) {
+    System.out.println("Nome: " + nome);
+}</code></pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>Collections, Autoboxing e Ordenação</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Collections:</strong> Diferente do Vetor, listas como
+              <code>ArrayList</code> e <code>LinkedList</code> têm tamanho
+              DINÂMICO (crescem sozinhas).
+            </p>
+            <p>
+              <strong>Autoboxing/Unboxing:</strong> É a conversão automática que
+              o Java faz entre tipos primitivos (<code>int</code>) e suas
+              Classes (<code>Integer</code>), pois Coleções só aceitam Objetos.
+            </p>
+            <p><strong>Exemplo (Java):</strong></p>
+            <pre><code>import java.util.ArrayList;
+import java.util.Collections;
+
+public class TesteLista {
+    public static void main(String[] args) {
+        // Criando uma Lista Dinâmica
+        ArrayList&lt;String&gt; nomes = new ArrayList&lt;&gt;();
+        
+        nomes.add("Zeca");
+        nomes.add("Ana");
+        nomes.add("Pedro");
+
+        // Ordenando a lista em ordem alfabética
+        Collections.sort(nomes);
+        
+        System.out.println(nomes); // [Ana, Pedro, Zeca]
+    }
+}</code></pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>Versionamento de Código (Git)</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> Ferramentas como o
+              <strong>Git</strong> servem para salvar o histórico do seu código.
+              O <strong>GitHub</strong> é onde você guarda isso na nuvem.
+            </p>
+            <p><strong>Comandos Básicos:</strong></p>
+            <ul>
+              <li><code>git init</code> (Inicia o versionamento)</li>
+              <li><code>git add .</code> (Prepara os arquivos)</li>
+              <li><code>git commit -m "mensagem"</code> (Salva a versão)</li>
+              <li><code>git push</code> (Envia para a nuvem)</li>
+            </ul>
+          </div>
+        </details>
+
+        <details>
+          <summary>Conexão com Banco de Dados (JDBC)</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> Para o Java conversar com o MySQL,
+              usamos uma biblioteca chamada <strong>JDBC</strong> (Java Database
+              Connectivity).
+            </p>
+            <p><strong>Exemplo Básico de Conexão:</strong></p>
+            <pre><code>import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class Conexao {
+    public static void main(String[] args) {
+        try {
+            // URL do banco, usuário e senha
+            String url = "jdbc:mysql://localhost:3306/meubanco";
+            String user = "root";
+            String password = "123";
+
+            // Tentando conectar
+            Connection conexao = DriverManager.getConnection(url, user, password);
+            System.out.println("Conectado com sucesso!");
+            
+        } catch (Exception e) {
+            System.out.println("Erro ao conectar: " + e.getMessage());
+        }
+    }
+}</code></pre>
+          </div>
+        </details>
+      </div>
+      <!-- FIM DA MATÉRIA 5 -->
+
+      <!-- ======================================================= -->
+      <!-- MATÉRIA 6: Redes de Computadores I                      -->
+      <!-- ======================================================= -->
+      <div class="cartao-materia">
+        <h2>Redes de Computadores I</h2>
+        <p>
+          <strong>Resumo:</strong> Fundamentos de infraestrutura, equipamentos,
+          topologias, cabeamento estruturado e os modelos de comunicação OSI e
+          TCP/IP.
+        </p>
+
+        <details>
+          <summary>Classificação e Topologias de Rede</summary>
+          <div class="conteudo-unidade">
+            <p><strong>Classificação por Abrangência (Tamanho):</strong></p>
+            <ul>
+              <li>
+                <strong>PAN:</strong> Personal Area Network (Bluetooth, rede
+                pessoal).
+              </li>
+              <li>
+                <strong>LAN:</strong> Local Area Network (Rede local, uma casa
+                ou prédio).
+              </li>
+              <li>
+                <strong>MAN:</strong> Metropolitan Area Network (Rede
+                metropolitana, interliga bairros).
+              </li>
+              <li>
+                <strong>WAN:</strong> Wide Area Network (Rede de longa
+                distância, países, a própria Internet).
+              </li>
+            </ul>
+            <p><strong>Topologias Físicas (Desenho da rede):</strong></p>
+            <ul>
+              <li>
+                <strong>Ponto a Ponto:</strong> Dois PCs ligados diretamente.
+              </li>
+              <li>
+                <strong>Estrela:</strong> Todos ligados a um equipamento central
+                (Switch). É a mais usada hoje.
+              </li>
+              <li>
+                <strong>Barramento:</strong> Todos no mesmo cabo (antigo, se o
+                cabo quebra, a rede cai).
+              </li>
+              <li>
+                <strong>Anel:</strong> Sinais andam em círculo (Token Ring).
+              </li>
+              <li>
+                <strong>Malha (Mesh):</strong> Todos conectados com todos (alta
+                redundância).
+              </li>
+            </ul>
+          </div>
+        </details>
+
+        <details>
+          <summary>Transmissão, Meios e Hardware</summary>
+          <div class="conteudo-unidade">
+            <p><strong>Modos de Transmissão:</strong></p>
+            <ul>
+              <li><strong>Simplex:</strong> Só vai (Ex: Rádio, TV).</li>
+              <li>
+                <strong>Half-Duplex:</strong> Vai e volta, mas um de cada vez
+                (Ex: Walkie-talkie).
+              </li>
+              <li>
+                <strong>Full-Duplex:</strong> Vai e volta ao mesmo tempo (Ex:
+                Telefone, redes modernas).
+              </li>
+            </ul>
+            <p>
+              <strong>Meios de Transmissão:</strong> Guiados (Cabos de Cobre,
+              Fibra Óptica) e Não Guiados (Wi-Fi, Satélite, Rádio).
+            </p>
+            <p><strong>Hardware de Rede:</strong></p>
+            <ul>
+              <li>
+                <strong>Placa de Rede (NIC):</strong> Onde o cabo entra. Tem o
+                endereço físico (MAC).
+              </li>
+              <li>
+                <strong>Hub:</strong> "Burro". Recebe a informação e grita para
+                todos (Gera lentidão/colisão).
+              </li>
+              <li>
+                <strong>Switch:</strong> "Inteligente". Sabe quem é quem pelo
+                MAC Address e manda só para o PC certo.
+              </li>
+              <li>
+                <strong>Roteador:</strong> Conecta redes DIFERENTES (Ex: sua LAN
+                com a WAN/Internet) usando o endereço IP.
+              </li>
+            </ul>
+          </div>
+        </details>
+
+        <details>
+          <summary>Modelos de Camadas: OSI e TCP/IP</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> Dividir a comunicação em "fatias" para
+              facilitar a criação de regras (protocolos). O
+              <strong>OSI</strong> é o modelo teórico (7 camadas). O
+              <strong>TCP/IP</strong> é o modelo prático usado na Internet (4 ou
+              5 camadas).
+            </p>
+            <p><strong>As Camadas (Visão Prática):</strong></p>
+            <ul>
+              <li>
+                <strong>Física:</strong> O cabo, o sinal elétrico, a luz da
+                fibra, o Wi-Fi. (Bits).
+              </li>
+              <li>
+                <strong>Enlace:</strong> Comunicação local. Usa o Switch e o
+                endereço MAC. (Quadros/Frames).
+              </li>
+              <li>
+                <strong>Rede:</strong> Roteamento. Acha o melhor caminho. Usa o
+                Roteador e o endereço IP. (Pacotes).
+              </li>
+              <li>
+                <strong>Transporte:</strong> Garante a entrega. Protocolo TCP
+                (garante entrega, mais lento) ou UDP (não garante, mas é rápido,
+                ex: vídeos/jogos). (Segmentos).
+              </li>
+              <li>
+                <strong>Aplicação:</strong> O que o usuário vê. Protocolos: HTTP
+                (Sites), DNS (Nomes), FTP (Arquivos).
+              </li>
+            </ul>
+          </div>
+        </details>
+
+        <details>
+          <summary>Camada de Rede: Endereçamento IP</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>IPv4 vs IPv6:</strong> IPv4 (32 bits, ex: 192.168.1.10)
+              está acabando. IPv6 (128 bits, letras e números) é o futuro.
+            </p>
+            <p><strong>IP Público vs Privado:</strong></p>
+            <ul>
+              <li>
+                <strong>Público:</strong> Único no mundo (fornecido pelo seu
+                provedor de internet).
+              </li>
+              <li>
+                <strong>Privado:</strong> Usado dentro da sua LAN (Ex:
+                192.168.x.x ou 10.x.x.x). Não navega direto na internet sem o
+                roteador (NAT).
+              </li>
+            </ul>
+            <p>
+              <strong>Dinâmico vs Estático:</strong> Dinâmico muda (entregue
+              pelo servidor DHCP). Estático é fixado manualmente (usado em
+              servidores e impressoras).
+            </p>
+            <p><strong>Exemplo de Comando (Terminal):</strong></p>
+            <pre><code># Descobrir seu IP no Windows
+ipconfig
+
+# Testar se um site ou PC está respondendo na rede
+ping www.google.com</code></pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>Cabeamento Estruturado e Normas</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> Organizar os cabos de forma padronizada
+              para evitar bagunça, facilitar manutenção e suportar tecnologias
+              futuras.
+            </p>
+            <p>
+              <strong>Componentes:</strong> Cabos UTP (Par trançado), Conectores
+              RJ-45, Patch Panels (painel de manobra), Racks (armários de
+              telecom).
+            </p>
+            <p>
+              <strong>Normas (TIA/EIA-568):</strong> Define a ordem das cores
+              nos cabos de rede.
+            </p>
+            <p><strong>Exemplo (Padrão T568A vs T568B):</strong></p>
+            <pre><code>// Padrão T568A (Cores da esquerda para a direita)
+1. Branco/Verde | 2. Verde | 3. Branco/Laranja | 4. Azul 
+5. Branco/Azul  | 6. Laranja | 7. Branco/Marrom | 8. Marrom
+
+// Padrão T568B (Mais usado no Brasil)
+1. Branco/Laranja | 2. Laranja | 3. Branco/Verde | 4. Azul 
+5. Branco/Azul    | 6. Verde   | 7. Branco/Marrom | 8. Marrom</code></pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>Instalações Elétricas e Projetos de Rede</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Instalações Elétricas:</strong> Redes de dados são
+              sensíveis. É obrigatório ter um bom
+              <strong>Aterramento</strong> (fio terra) para evitar queima de
+              equipamentos e usar <strong>Nobreaks (UPS)</strong> para manter os
+              switches/servidores ligados se a luz cair.
+            </p>
+            <p><strong>Projeto de Redes:</strong></p>
+            <ol>
+              <li>
+                <strong>Levantamento:</strong> O que o cliente precisa? Quantos
+                PCs?
+              </li>
+              <li>
+                <strong>Topologia Lógica e Física:</strong> Desenhar onde passam
+                os cabos e quais serão os IPs.
+              </li>
+              <li>
+                <strong>Documentação:</strong> Planta baixa, identificação dos
+                cabos (etiquetas) e relatórios de certificação (testes com
+                aparelhos Fluke).
+              </li>
+            </ol>
+          </div>
+        </details>
+      </div>
+      <!-- FIM DA MATÉRIA 6 -->
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+      <p>Criado com dedicação por:</p>
+      <div class="rodape-autores">
+        <!-- 1. Anaclara -->
+        <a
+          href="https://instagram.com/ana_randly"
+          target="_blank"
+          class="link-insta"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+          Anaclara
+        </a>
+
+        <!-- 2. José Vinícius -->
+        <a
+          href="https://instagram.com/vinicius_ramos_19"
+          target="_blank"
+          class="link-insta"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+          José Vinícius
+        </a>
+
+        <!-- 3. Juliana Pacheco -->
+        <a
+          href="https://instagram.com/juliana44922"
+          target="_blank"
+          class="link-insta"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+          Juliana Pacheco
+        </a>
+
+        <!-- 4. Maísa Mayara -->
+        <a
+          href="https://instagram.com/maisa_mids"
+          target="_blank"
+          class="link-insta"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+          Maísa Mayara
+        </a>
+      </div>
+    </footer>
+
+    <script>
+      const barraPesquisa = document.getElementById("barraPesquisa");
+      const cartoes = document.getElementsByClassName("cartao-materia");
+
+      barraPesquisa.addEventListener("keyup", function () {
+        let textoPesquisa = barraPesquisa.value.toLowerCase();
+
+        for (let i = 0; i < cartoes.length; i++) {
+          let conteudoCartao = cartoes[i].innerText.toLowerCase();
+
+          if (conteudoCartao.includes(textoPesquisa)) {
+            cartoes[i].style.display = "block";
+          } else {
+            cartoes[i].style.display = "none";
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
