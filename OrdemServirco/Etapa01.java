@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class App {
+public class Etapa01 {
     public static void main(String[] args) throws Exception {
         Scanner teclado = new Scanner(System.in);
 

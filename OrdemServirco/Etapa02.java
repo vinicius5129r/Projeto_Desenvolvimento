@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class AtividadeOrdemServico {
+public class Etapa02 {
 
     public static void main(String[] args) {
 
