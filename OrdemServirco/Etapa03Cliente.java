@@ -11,35 +11,6 @@ public class Etapa03Cliente {
         this.horas = horas;
     }
 
-    public static double calcularTotal(double valorHora, int horas) {
-
-        // Aplicação direta da fórmula fornecida no enunciado
-        double total = valorHora * horas;
-
-        // Retornando o resultado para quem chamou o método
-        return total;
-    }
-
-    public static void exibirResumo(String nomeCliente,
-                                    String descricao,
-                                    double valorHora,
-                                    int horas,
-                                    double total) {
-
-        System.out.println("\n==============================");
-        System.out.println("      RESUMO DA ORDEM");
-        System.out.println("==============================");
-
-        System.out.println("Cliente: " + nomeCliente);
-        System.out.println("Problema: " + descricao);
-        System.out.println("Valor da hora: " + valorHora);
-        System.out.println("Horas trabalhadas: " + horas);
-        System.out.println("Total a pagar: " + total);
-
-        System.out.println("==============================");
-    }
-
-
     public String getNomeCliente() {
         return nomeCliente;
     }

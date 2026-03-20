@@ -32,10 +32,10 @@ public class Etapa03 {
 
         // Agora o cálculo não acontece diretamente no main.
         // O main apenas chama o método responsável pelo cálculo.
-        double total = Etapa03Cliente.calcularTotal(valorHora, horas);
+        double total = Etapa02.calcularTotal(valorHora, horas);
 
         // O resumo também será exibido por um método separado.
-        Etapa03Cliente.exibirResumo(nomeCliente, descricao, valorHora, horas, total);
+        Etapa02.exibirResumo(nomeCliente, descricao, valorHora, horas, total);
 
 
         // Encerrando o Scanner
