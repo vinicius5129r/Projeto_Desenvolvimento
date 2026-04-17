@@ -537,7 +537,14 @@ public class Gato extends Animal {
               ESTRUTURA do banco (Tabelas, Colunas).
             </p>
             <p><strong>Exemplo (CREATE, ALTER, DROP):</strong></p>
-            <pre><code>-- Criar uma tabela
+            <pre><code>
+CREATE TABLE Nome da Tabela
+(
+Nome do atributo1 Tipo de dado [NOT NULL] DEFAULT(expressão_padrão)],
+Nome do atributo2 Tipo de dado [NOT NULL] [DEFAULT(expressão_padrão)],
+…
+);
+              -- Criar uma tabela
 CREATE TABLE Clientes (
     id INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(100),
@@ -549,6 +556,61 @@ ALTER TABLE Clientes ADD email VARCHAR(50);
 
 -- Excluir a tabela inteira
 DROP TABLE Clientes;</code></pre>
+            <br />
+            <p>
+              <strong>Tipo de Dados: </strong>
+              Linguagem DDL Em SQL os tipos de dados são agrupados em 3
+              categorias:
+            </p>
+            <ul>
+              <li>Caracteres (Strings)</li>
+              <li>Numéricos</li>
+              <li>Tempo e Data</li>
+            </ul>
+            <h2 id="tabTitulo">Tipo de Dados em SQL</h2>
+            <table class="tabela-dados">
+              <tr>
+                <th>Para dados do tipo</th>
+                <th>Tipo definido</th>
+                <th>Tamanho</th>
+              </tr>
+              <tr>
+                <td>Caracteres</td>
+                <td>Char(n), Varchar(n)</td>
+                <td>Armazena até n bytes</td>
+              </tr>
+              <tr>
+                <td>Numérico Exato</td>
+                <td>Decimal(p,e) ou Numeric(p,e)</td>
+                <td>Depende</td>
+              </tr>
+              <tr>
+                <td>Número Aproximado</td>
+                <td>Float, Real</td>
+                <td>8 bytes e 4 bytes</td>
+              </tr>
+              <tr>
+                <td>Número Inteiro</td>
+                <td>Int, Smallint, Tinyint</td>
+                <td>4 bytes, 2 bytes e 1 byte</td>
+              </tr>
+              <tr>
+                <td>Data e Hora</td>
+                <td>Date, Time, Smalldatetime, Timestamp</td>
+                <td>8 bytes, 4 bytes</td>
+              </tr>
+              <tr>
+                <td>Texto e Imagens</td>
+                <td>Text, Image, Ntext</td>
+                <td>Variável</td>
+              </tr>
+              <tr>
+                <td>Monetário</td>
+                <td>Money, Smallmoney</td>
+                <td>8 bytes, 4 bytes</td>
+              </tr>
+            </table>
+
           </div>
         </details>
 
@@ -1200,6 +1262,9 @@ ping www.google.com</code></pre>
 
     <!-- RODAPÉ -->
     <footer>
+      <h2>Projeto incompleto</h2>
+      <p>Falta de conteúdo</p>
+      <br />
       <p>Criado com dedicação por:</p>
       <div class="rodape-autores">
         <!-- 1. Anaclara -->
