@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banco de Dados I - Meus Estudos</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Banco de Dados I</h1>
+      <p>
+        Fundamentos de armazenamento, modelagem e aprofundamento em comandos
+        SQL.
+      </p>
+    </header>
+
+    <main>
+      <a href="index.html" class="btn-voltar"
+        ><span>⬅</span> Voltar para o Início</a
+      >
+
+      <div
+        class="cartao-materia"
+        style="
+          cursor: default;
+          transform: none;
+          box-shadow: var(--sombra-leve);
+          border-color: var(--cor-borda);
+        "
+      >
+        <details>
+          <summary>Conceitos Básicos e SGBD</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Dados vs Informação:</strong> Dado é um fato bruto (ex:
+              "25"). Informação é o dado com significado (ex: "Idade: 25").
+              Conhecimento é a aplicação da informação.
+            </p>
+            <p>
+              <strong>SGBD:</strong> Sistema Gerenciador de Banco de Dados. É o
+              software que gerencia os dados (ex: MySQL, PostgreSQL, Oracle).
+            </p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Modelagem: MER, DER e Cardinalidade</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>MER (Modelo Entidade Relacionamento):</strong> É a ideia
+              teórica de como as coisas se conectam.
+            </p>
+            <p>
+              <strong>DER (Diagrama):</strong> É o desenho visual dessa ideia
+              (caixinhas e linhas).
+            </p>
+            <p>
+              <strong>Cardinalidade:</strong> Define como as tabelas se
+              relacionam:
+            </p>
+            <ul>
+              <li>
+                <strong>1:1</strong> (Um para Um) - Ex: Uma pessoa tem um CPF.
+              </li>
+              <li>
+                <strong>1:N</strong> (Um para Muitos) - Ex: Um cliente faz
+                vários pedidos.
+              </li>
+              <li>
+                <strong>N:M</strong> (Muitos para Muitos) - Ex: Vários alunos
+                cursam várias disciplinas.
+              </li>
+            </ul>
+          </div>
+        </details>
+
+        <details>
+          <summary>Normalização (As 3 Formas Normais)</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> Regras para evitar repetição de dados e
+              inconsistências.
+            </p>
+            <ul>
+              <li>
+                <strong>1FN:</strong> Os dados devem ser atômicos (não pode ter
+                múltiplos valores na mesma célula).
+              </li>
+              <li>
+                <strong>2FN:</strong> Estar na 1FN e todos os atributos devem
+                depender de TODA a chave primária.
+              </li>
+              <li>
+                <strong>3FN:</strong> Estar na 2FN e nenhum atributo pode
+                depender de outro atributo que não seja a chave primária.
+              </li>
+            </ul>
+          </div>
+        </details>
+
+        <details>
+          <summary>SQL - DDL (Definição de Dados e Constraints)</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> Comandos para criar e alterar a
+              ESTRUTURA do banco (Tabelas, Colunas, Índices e Restrições).
+            </p>
+            <p><strong>Constraints (Restrições):</strong></p>
+            <ul>
+              <li>
+                <strong>PRIMARY KEY (PK):</strong> Chave primária, identificador
+                único.
+              </li>
+              <li>
+                <strong>FOREIGN KEY (FK):</strong> Chave estrangeira, garante
+                integridade referencial.
+              </li>
+              <li>
+                <strong>UNIQUE:</strong> Garante que o valor não se repita na
+                coluna.
+              </li>
+              <li>
+                <strong>AUTO_INCREMENT:</strong> Gera números sequenciais
+                automaticamente.
+              </li>
+            </ul>
+            <p><strong>Exemplos (CREATE, ALTER, DROP, INDEX):</strong></p>
+            <pre><code>-- Criar Banco e Usar
+CREATE DATABASE locadora;
+USE locadora;
+
+-- Criar tabela com Constraints
+CREATE TABLE cliente (
+    clie_codigo INT AUTO_INCREMENT,
+    clie_nome VARCHAR(100) NOT NULL,
+    clie_cpf VARCHAR(14) UNIQUE,
+    CONSTRAINT pk_cliente PRIMARY KEY (clie_codigo)
+);
+
+-- Alterar tabela (Adicionar, Modificar, Excluir colunas)
+ALTER TABLE cliente ADD clie_celular VARCHAR(15);
+ALTER TABLE cliente MODIFY clie_celular VARCHAR(20);
+ALTER TABLE cliente DROP clie_celular;
+
+-- Adicionar Chave Estrangeira via ALTER
+ALTER TABLE titulo ADD CONSTRAINT fk_titulo_categoria 
+FOREIGN KEY (cate_codigo) REFERENCES categoria(cate_codigo);
+
+-- Criar Índice para buscas mais rápidas
+CREATE INDEX ix_cliente_nome ON cliente (clie_nome);</code></pre>
+            <br />
+            <p><strong>Tipo de Dados em SQL:</strong></p>
+            <table class="tabela-dados">
+              <tr>
+                <th>Para dados do tipo</th>
+                <th>Tipo definido</th>
+                <th>Tamanho</th>
+              </tr>
+              <tr>
+                <td>Caracteres</td>
+                <td>Char(n), Varchar(n)</td>
+                <td>Armazena até n bytes</td>
+              </tr>
+              <tr>
+                <td>Numérico Exato</td>
+                <td>Decimal(p,e) ou Numeric(p,e)</td>
+                <td>Depende</td>
+              </tr>
+              <tr>
+                <td>Número Aproximado</td>
+                <td>Float, Real</td>
+                <td>8 bytes e 4 bytes</td>
+              </tr>
+              <tr>
+                <td>Número Inteiro</td>
+                <td>Int, Smallint, Tinyint</td>
+                <td>4 bytes, 2 bytes e 1 byte</td>
+              </tr>
+              <tr>
+                <td>Data e Hora</td>
+                <td>Date, Time, Smalldatetime, Timestamp</td>
+                <td>8 bytes, 4 bytes</td>
+              </tr>
+              <tr>
+                <td>Texto e Imagens</td>
+                <td>Text, Image, Ntext</td>
+                <td>Variável</td>
+              </tr>
+              <tr>
+                <td>Monetário</td>
+                <td>Money, Smallmoney</td>
+                <td>8 bytes, 4 bytes</td>
+              </tr>
+            </table>
+          </div>
+        </details>
+
+        <details>
+          <summary>SQL - DML (Manipulação de Dados)</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> Comandos para inserir, atualizar e
+              excluir DADOS nas tabelas.
+            </p>
+            <p><strong>Exemplos (INSERT, UPDATE, DELETE):</strong></p>
+            <pre><code>-- Inserir um dado (informando colunas)
+INSERT INTO filme (film_titulo, film_ano) VALUES ('THE BATMAN', 2022);
+
+-- Inserir múltiplos dados de uma vez
+INSERT INTO exibicao (cine_codigo, film_codigo) VALUES 
+(1, 1), (1, 2), (2, 3);
+
+-- Atualizar dados (Sempre use WHERE!)
+UPDATE cinema 
+SET cine_cidade = 'Manaus', cine_uf = 'AM' 
+WHERE cine_codigo = 1;
+
+-- Excluir dados (Sempre use WHERE!)
+DELETE FROM locacao 
+WHERE film_codigo = 21;</code></pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>SQL - DQL (Consultas e Filtros Avançados)</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> O comando <code>SELECT</code> recupera
+              dados. Podemos usar operadores lógicos (AND, OR, NOT) e
+              relacionais (=, >, <, !=).
+            </p>
+            <p><strong>Filtros Especiais:</strong></p>
+            <ul>
+              <li>
+                <strong>IN / NOT IN:</strong> Busca valores dentro de uma lista
+                específica.
+              </li>
+              <li>
+                <strong>BETWEEN:</strong> Busca valores dentro de um intervalo.
+              </li>
+              <li>
+                <strong>LIKE:</strong> Busca partes de uma string (<code
+                  >%</code
+                >
+                para vários caracteres, <code>_</code> para um caractere).
+              </li>
+              <li>
+                <strong>IS NULL / IS NOT NULL:</strong> Testa a ausência de
+                valor.
+              </li>
+              <li><strong>DISTINCT:</strong> Remove resultados repetidos.</li>
+              <li>
+                <strong>LIMIT / OFFSET:</strong> Limita a quantidade de linhas e
+                diz de onde começar a ler.
+              </li>
+              <li>
+                <strong>ORDER BY:</strong> Ordena o resultado (ASC para
+                crescente, DESC para decrescente).
+              </li>
+            </ul>
+            <p><strong>Exemplos:</strong></p>
+            <pre><code>-- Uso do IN e DISTINCT
+SELECT DISTINCT elei_zona FROM eleitor 
+WHERE elei_nome IN ('PEDRO', 'MARIA');
+
+-- Uso do LIKE (Nomes que começam com M)
+SELECT func_nome FROM funcionario 
+WHERE func_nome LIKE 'M%';
+
+-- Uso do BETWEEN e IS NOT NULL
+SELECT * FROM cliente 
+WHERE clie_dt_cadastro BETWEEN '2022-01-01' AND '2022-12-31'
+AND clie_foto IS NOT NULL;
+
+-- Paginação com LIMIT e OFFSET (Pega 5 registros pulando os 3 primeiros)
+SELECT * FROM candidato 
+ORDER BY cand_numero DESC 
+LIMIT 5 OFFSET 3;</code></pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>SQL - DQL (Funções de Agregação e Agrupamento)</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> Funções que realizam cálculos em um
+              conjunto de resultados. O <code>GROUP BY</code> agrupa esses
+              resultados, e o <code>HAVING</code> filtra esses grupos.
+            </p>
+            <ul>
+              <li><strong>COUNT:</strong> Conta o número de linhas.</li>
+              <li><strong>SUM:</strong> Soma os valores numéricos.</li>
+              <li>
+                <strong>MAX / MIN:</strong> Retorna o maior / menor valor.
+              </li>
+              <li><strong>AVG:</strong> Calcula a média aritmética.</li>
+            </ul>
+            <p><strong>Exemplos:</strong></p>
+            <pre><code>-- Funções matemáticas básicas
+SELECT 
+    COUNT(*) AS "Qtd Candidatos",
+    MAX(cand_numero) AS "Maior Número",
+    AVG(cand_numero) AS "Média"
+FROM candidato;
+
+-- Agrupando dados (GROUP BY) e filtrando o grupo (HAVING)
+SELECT part_numero, COUNT(*) AS "Qtd de Candidatos" 
+FROM candidato 
+GROUP BY part_numero 
+HAVING COUNT(*) > 5 
+ORDER BY part_numero;</code></pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>SQL - DQL (Funções de Strings)</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> Funções nativas para manipular textos
+              (caracteres) direto no banco de dados.
+            </p>
+            <p><strong>Principais Funções:</strong></p>
+            <pre><code>-- CONCAT: Junta textos
+SELECT CONCAT('Nome: ', elei_nome, ' - Zona: ', elei_zona) FROM eleitor;
+
+-- CHAR_LENGTH: Conta a quantidade de caracteres
+SELECT CHAR_LENGTH('Rondônia');
+
+-- UPPER / LOWER: Maiúsculas e Minúsculas
+SELECT UPPER('instituto'), LOWER('FEDERAL');
+
+-- TRIM / LTRIM / RTRIM: Remove espaços em branco
+SELECT TRIM('   IFRO   ');
+
+-- REPLACE: Substitui uma palavra por outra
+SELECT REPLACE('GUAJARÁ-MIRIM', 'MIRIM', 'MIRIM/RO');
+
+-- SUBSTR: Extrai um pedaço do texto (A partir da pos 11, pega 5 letras)
+SELECT SUBSTR('INSTITUTO FEDERAL', 11, 5);</code></pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>SQL - DQL (Funções de Datas)</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> Funções para manipular, formatar e
+              fazer cálculos com datas e horas.
+            </p>
+            <p><strong>Principais Funções:</strong></p>
+            <pre><code>-- CURDATE() e NOW(): Data atual / Data e Hora atual
+SELECT CURDATE(), NOW();
+
+-- Extrair partes da data
+SELECT DAY(CURDATE()), MONTH(CURDATE()), YEAR(CURDATE());
+
+-- DATE_ADD / DATE_SUB: Somar ou subtrair dias/meses/anos
+SELECT DATE_ADD('2022-01-01', INTERVAL 150 DAY);
+SELECT DATE_SUB(CURDATE(), INTERVAL 2 MONTH);
+
+-- DATEDIFF: Diferença de dias entre duas datas
+SELECT DATEDIFF('2022-03-14', '2022-01-14');
+
+-- DATE_FORMAT: Formatar a data para o padrão brasileiro
+SELECT DATE_FORMAT(CURDATE(), '%d/%m/%Y') AS "Data Formatada";
+SELECT DATE_FORMAT(NOW(), '%d/%m/%Y %H:%i:%s');</code></pre>
+          </div>
+        </details>
+      </div>
+    </main>
+
+    <footer>
+      <p class="frase-motivacional">
+        "Os dados são o novo petróleo. Saber manipulá-los é o superpoder do
+        século 21."
+      </p>
+    </footer>
+  </body>
+</html>

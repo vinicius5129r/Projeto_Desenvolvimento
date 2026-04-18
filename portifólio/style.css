@@ -59,6 +59,7 @@ header p {
 ul {
   margin-left: 30px;
 }
+
 /* --- 5. BARRA DE PESQUISA --- */
 #barraPesquisa {
   width: 100%;
@@ -116,7 +117,9 @@ main {
   border-collapse: collapse;
   margin-top: 1rem;
   overflow-x: auto;
+  width: 100%;
 }
+
 .tabela-dados th,
 .tabela-dados td {
   border: 1px solid var(--cor-borda);

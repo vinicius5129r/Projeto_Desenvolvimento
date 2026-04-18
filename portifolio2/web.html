@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fundamentos Web - Meus Estudos</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Fundamentos de Desenvolvimento Web</h1>
+      <p>
+        Base teórica e prática sobre a web, estruturação com HTML e estilização
+        com CSS.
+      </p>
+    </header>
+
+    <main>
+      <a href="index.html" class="btn-voltar"
+        ><span>⬅</span> Voltar para o Início</a
+      >
+
+      <div
+        class="cartao-materia"
+        style="
+          cursor: default;
+          transform: none;
+          box-shadow: var(--sombra-leve);
+          border-color: var(--cor-borda);
+        "
+      >
+        <details>
+          <summary>Internet e Arquitetura Cliente-Servidor</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> A Internet é a rede física. A Web é o
+              serviço que roda nela. A arquitetura funciona com um
+              <strong>Cliente</strong> (navegador) pedindo informações para um
+              <strong>Servidor</strong> (computador que hospeda o site).
+            </p>
+            <p>
+              <strong>2 Níveis:</strong> Cliente direto no Servidor.
+              <strong>3 Níveis:</strong> Cliente -> Servidor de Aplicação ->
+              Banco de Dados.
+            </p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Introdução ao HTML e DOM</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> HTML não é linguagem de programação, é
+              marcação. O DOM é a árvore que o navegador cria para ler o HTML.
+            </p>
+            <p><strong>Exemplo de Estrutura Básica:</strong></p>
+            <pre><code>&lt;!doctype html&gt; 
+&lt;html lang="pt_br"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Olá mundo!&lt;/h1&gt;
+    &lt;p&gt;Essa é a estrutura base html-5&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>Listas Ordenadas e Não Ordenadas</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> Usadas para organizar informações.
+              <b>&lt;ul&gt;</b> para listas com bolinhas, <b>&lt;ol&gt;</b> para
+              listas numeradas.
+            </p>
+            <p><strong>Exemplo:</strong></p>
+            <pre><code>&lt;ul&gt;
+    &lt;li&gt;Item sem número&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+    &lt;li&gt;Primeiro passo&lt;/li&gt;
+    &lt;li&gt;Segundo passo&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>Tabulação (Tabelas)</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> Criação de tabelas de dados usando
+              linhas (tr) e colunas/células (td).
+            </p>
+            <p><strong>Exemplo:</strong></p>
+            <pre><code>&lt;table border="1"&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Nome&lt;/th&gt;
+        &lt;th&gt;Idade&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;João&lt;/td&gt;
+        &lt;td&gt;25&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>Mídias e Hiperlinks</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> Como inserir imagens, vídeos e criar
+              links para outras páginas.
+            </p>
+            <p><strong>Exemplo:</strong></p>
+            <pre><code>&lt;!-- Imagem --&gt;
+&lt;img src="foto.jpg" alt="Descrição da foto"&gt;
+
+&lt;!-- Link --&gt;
+&lt;a href="https://google.com"&gt;Ir para o Google&lt;/a&gt;
+
+&lt;!-- Vídeo --&gt;
+&lt;video controls&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+&lt;/video&gt;</code></pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>CSS e Box Model</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> CSS estiliza a página. O
+              <strong>Box Model</strong> diz que todo elemento é uma caixa com:
+              Margin (espaço fora), Border (borda), Padding (espaço dentro) e o
+              Conteúdo.
+            </p>
+            <p><strong>Exemplo:</strong></p>
+            <pre><code>/* Seleciona todos os parágrafos */
+p {
+    color: blue;
+    margin: 20px; /* Afasta dos outros elementos */
+    padding: 10px; /* Espaço interno */
+    border: 1px solid black;
+    display: block; /* Ocupa a linha toda */
+}</code></pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>Flexbox</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> Sistema de layout unidimensional (linha
+              ou coluna) para alinhar itens facilmente.
+            </p>
+            <p><strong>Exemplo:</strong></p>
+            <pre><code>.container-pai {
+    display: flex;
+    justify-content: center; /* Centraliza na horizontal */
+    align-items: center; /* Centraliza na vertical */
+    gap: 10px; /* Espaço entre os filhos */
+}</code></pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>Formulários</summary>
+          <div class="conteudo-unidade">
+            <p><strong>Conceito:</strong> Capturar dados do usuário.</p>
+            <p><strong>Exemplo:</strong></p>
+            <pre><code>&lt;form&gt;
+    &lt;label for="nome"&gt;Seu Nome:&lt;/label&gt;
+    &lt;input type="text" id="nome" placeholder="Digite aqui"&gt;
+    &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>Grid System</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> Sistema de layout bidimensional (linhas
+              e colunas ao mesmo tempo).
+            </p>
+            <p><strong>Exemplo:</strong></p>
+            <pre><code>.meu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
+    gap: 15px;
+}</code></pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>Múltiplas Páginas e Responsividade</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> Responsividade é fazer o site se
+              adaptar ao celular usando <code>@media</code>. Múltiplas páginas
+              são arquivos HTML separados ligados por links.
+            </p>
+            <p><strong>Exemplo:</strong></p>
+            <pre><code>/* Se a tela for menor que 600px, muda a cor */
+@media (max-width: 600px) {
+    body {
+        background-color: lightgray;
+    }
+}</code></pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>Projeto Prático</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> Etapas finais onde modelamos o projeto
+              (Wireframes/Figma), codificamos na prática juntando HTML e CSS, e
+              apresentamos o resultado final.
+            </p>
+          </div>
+        </details>
+      </div>
+    </main>
+
+    <footer>
+      <p class="frase-motivacional">
+        "A web é a tela em branco do século 21. Continue codificando e pintando
+        o futuro!"
+      </p>
+    </footer>
+  </body>
+</html>

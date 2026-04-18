@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lógica de Programação - Meus Estudos</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Lógica de Programação</h1>
+      <p>
+        A base do raciocínio computacional. Criação de algoritmos, variáveis,
+        laços de repetição e decisões.
+      </p>
+    </header>
+
+    <main>
+      <a href="index.html" class="btn-voltar"
+        ><span>⬅</span> Voltar para o Início</a
+      >
+
+      <div
+        class="cartao-materia"
+        style="
+          cursor: default;
+          transform: none;
+          box-shadow: var(--sombra-leve);
+          border-color: var(--cor-borda);
+        "
+      >
+        <details>
+          <summary>Introdução, Lógica e Diagrama de Blocos</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> Lógica é a organização do pensamento
+              para resolver um problema (Algoritmo). O computador executa passos
+              em <strong>sequência</strong>.
+            </p>
+            <p>
+              <strong>Diagrama de Blocos:</strong> Representação visual do
+              algoritmo usando formas geométricas (ex: losango para decisão,
+              retângulo para processamento).
+            </p>
+            <p>
+              <strong>Paradigmas:</strong> Estruturada (foco em
+              funções/sequência) vs Orientada a Objetos (foco em objetos do
+              mundo real).
+            </p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Variáveis, Constantes e Operadores</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> <strong>Variável</strong> guarda um
+              valor que pode mudar. <strong>Constante</strong> guarda um valor
+              fixo.
+            </p>
+            <p>
+              <strong>Operadores:</strong> Aritméticos (+, -, *, /) e Lógicos
+              (E, OU, NÃO).
+            </p>
+            <pre><code>algoritmo "ExemploVariaveis"
+var
+   idade: inteiro
+   nome: caractere
+   PI: real // Constante
+inicio
+   idade &lt;- 20
+   nome &lt;- "Maria"
+   PI &lt;- 3.14
+   escreval("O nome é: ", nome)
+fimalgoritmo</code></pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>Estruturas de Decisão (Se / Escolha)</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> O programa toma caminhos diferentes
+              dependendo de uma condição (Lógica Booleana).
+            </p>
+            <pre><code>// Estrutura SE / SENAO
+se (idade >= 18) entao
+   escreval("Maior de idade")
+senao
+   escreval("Menor de idade")
+fimse
+
+// Estrutura ESCOLHA / CASO
+escolha (opcao)
+   caso 1: escreval("Você escolheu 1")
+   outrocaso: escreval("Opção inválida")
+fimescolha</code></pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>Estruturas de Repetição (Enquanto / Repita)</summary>
+          <div class="conteudo-unidade">
+            <ul>
+              <li>
+                <strong>Enquanto (Teste no início):</strong> Só entra no laço se
+                a condição for verdadeira.
+              </li>
+              <li>
+                <strong>Repita (Teste no fim):</strong> Executa pelo menos uma
+                vez antes de testar a condição.
+              </li>
+            </ul>
+            <pre><code>contador &lt;- 1
+enquanto (contador &lt;= 5) faca
+   escreval(contador)
+   contador &lt;- contador + 1
+fimenquanto</code></pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>Vetores e Matrizes</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Vetor:</strong> Unidimensional (uma linha, como uma
+              lista).<br />
+              <strong>Matriz:</strong> Bidimensional (linhas e colunas, como uma
+              tabela).
+            </p>
+            <pre><code>var
+   notas: vetor [1..5] de real
+   tabuleiro: vetor [1..3, 1..3] de inteiro
+inicio
+   notas[1] &lt;- 8.5
+   tabuleiro[1, 2] &lt;- 9
+fimalgoritmo</code></pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>Apresentação e Sintaxe Java</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> Java é uma linguagem fortemente tipada,
+              orientada a objetos e multiplataforma (roda na JVM).
+            </p>
+            <pre><code>public class MeuPrograma {
+    public static void main(String[] args) {
+        System.out.println("Olá, Mundo!");
+        int idade = 25;
+    }
+}</code></pre>
+          </div>
+        </details>
+      </div>
+    </main>
+
+    <footer>
+      <p class="frase-motivacional">
+        "A lógica é o alicerce de todo grande software. Pense passo a passo e o
+        código fluirá."
+      </p>
+    </footer>
+  </body>
+</html>

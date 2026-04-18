@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>POO - Meus Estudos</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Programação Orientada a Objetos (POO)</h1>
+      <p>
+        Paradigma focado em representar o mundo real através de Objetos, Classes
+        e seus relacionamentos.
+      </p>
+    </header>
+
+    <main>
+      <a href="index.html" class="btn-voltar"
+        ><span>⬅</span> Voltar para o Início</a
+      >
+
+      <div
+        class="cartao-materia"
+        style="
+          cursor: default;
+          transform: none;
+          box-shadow: var(--sombra-leve);
+          border-color: var(--cor-borda);
+        "
+      >
+        <details>
+          <summary>Teoria, Estruturada vs POO e Variáveis vs Objetos</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> Na programação estruturada, o código é
+              uma sequência de funções (ações). Na POO, o código é um conjunto
+              de <strong>Objetos</strong> que interagem entre si. Variáveis
+              comuns guardam apenas um valor (ex: <code>int idade = 20;</code>).
+              Objetos guardam <strong>Atributos</strong> (características) e
+              <strong>Métodos</strong> (ações/comportamentos) juntos.
+            </p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Pilares da POO</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> A base da POO se resume em 4 regras
+              fundamentais:
+            </p>
+            <ul>
+              <li>
+                <strong>Abstração:</strong> Pegar algo do mundo real e trazer só
+                o que importa para o código.
+              </li>
+              <li>
+                <strong>Encapsulamento:</strong> Proteger os dados, escondendo o
+                que não precisa ser visto de fora.
+              </li>
+              <li>
+                <strong>Herança:</strong> Uma classe "filha" herda
+                características de uma classe "mãe".
+              </li>
+              <li>
+                <strong>Polimorfismo:</strong> Objetos diferentes podem
+                responder ao mesmo comando de formas diferentes.
+              </li>
+            </ul>
+          </div>
+        </details>
+
+        <details>
+          <summary>Classe Vazia e Atributos</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> A <strong>Classe</strong> é o molde (a
+              planta da casa). O <strong>Objeto</strong> é a casa construída.
+              Atributos são as características desse molde.
+            </p>
+            <p><strong>Exemplo:</strong></p>
+            <pre><code>// Criando a classe (O Molde)
+public class Carro {
+    // Atributos (Características)
+    String cor;
+    String modelo;
+    int ano;
+}</code></pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>Métodos (Funções) e Construtor</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> Métodos são as ações que o objeto faz.
+              O <strong>Construtor</strong> é um método especial chamado
+              automaticamente quando o objeto nasce (é instanciado com
+              <code>new</code>).
+            </p>
+            <p><strong>Exemplo:</strong></p>
+            <pre><code>public class Carro {
+    String modelo;
+
+    // Método Construtor (Tem o mesmo nome da classe)
+    public Carro(String modeloEscolhido) {
+        this.modelo = modeloEscolhido;
+    }
+
+    // Método comum (Ação)
+    public void acelerar() {
+        System.out.println("Vrum vrum!");
+    }
+}
+
+// Criando o objeto na prática:
+Carro meuCarro = new Carro("Fusca");
+meuCarro.acelerar();</code></pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>Encapsulamento, Getters e Setters</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> Para proteger os dados
+              (Encapsulamento), deixamos os atributos como
+              <code>private</code> (privados). Para acessá-los ou alterá-los de
+              forma segura, usamos métodos públicos chamados
+              <strong>Get</strong> (pegar) e <strong>Set</strong> (alterar).
+            </p>
+            <p><strong>Exemplo:</strong></p>
+            <pre><code>public class ContaBancaria {
+    // Privado: Ninguém de fora mexe direto aqui
+    private double saldo;
+
+    // Setter: Regra para alterar o saldo
+    public void setSaldo(double valor) {
+        if(valor > 0) {
+            this.saldo = valor;
+        }
+    }
+
+    // Getter: Regra para ver o saldo
+    public double getSaldo() {
+        return this.saldo;
+    }
+}</code></pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>Herança</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> Permite criar uma nova classe
+              aproveitando o código de uma classe que já existe. Usa-se a
+              palavra <code>extends</code>.
+            </p>
+            <p><strong>Exemplo:</strong></p>
+            <pre><code>// Classe Mãe
+public class Animal {
+    public void comer() {
+        System.out.println("Comendo...");
+    }
+}
+
+// Classe Filha (Herda de Animal)
+public class Cachorro extends Animal {
+    public void latir() {
+        System.out.println("Au au!");
+    }
+}</code></pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>Polimorfismo</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> "Muitas formas". É quando a classe
+              filha reescreve (sobrescreve) um método da classe mãe para fazer a
+              mesma ação, mas do seu próprio jeito.
+            </p>
+            <p><strong>Exemplo:</strong></p>
+            <pre><code>public class Animal {
+    public void fazerSom() {
+        System.out.println("Som de animal");
+    }
+}
+
+public class Gato extends Animal {
+    // Reescrevendo o método da mãe
+    @Override
+    public void fazerSom() {
+        System.out.println("Miau!");
+    }
+}</code></pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>Bibliotecas</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> Bibliotecas são pacotes de códigos
+              prontos feitos por outros programadores que importamos para
+              facilitar a vida.
+            </p>
+          </div>
+        </details>
+      </div>
+    </main>
+
+    <footer>
+      <p class="frase-motivacional">
+        "Objetos no código, soluções no mundo real. A abstração é o seu
+        superpoder."
+      </p>
+    </footer>
+  </body>
+</html>

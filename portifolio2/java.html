@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Linguagem Java - Meus Estudos</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Linguagem de Programação (Java Avançado)</h1>
+      <p>
+        Aprofundamento na linguagem Java, estruturas de controle, coleções,
+        versionamento e conexão com Banco de Dados.
+      </p>
+    </header>
+
+    <main>
+      <a href="index.html" class="btn-voltar"
+        ><span>⬅</span> Voltar para o Início</a
+      >
+
+      <div
+        class="cartao-materia"
+        style="
+          cursor: default;
+          transform: none;
+          box-shadow: var(--sombra-leve);
+          border-color: var(--cor-borda);
+        "
+      >
+        <details>
+          <summary>Variáveis, Escopo e Operadores</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Tipos Primitivos:</strong> <code>int</code>,
+              <code>double</code>, <code>boolean</code>, <code>char</code>.
+            </p>
+            <p>
+              <strong>Escopo:</strong> Variável local só existe dentro do bloco.
+              Variável global (atributo) pode ser vista por toda a classe.
+            </p>
+            <p>
+              <strong>Operadores:</strong> Aritméticos (+ - * / %), Relacionais
+              (== != > < >= <=) e Lógicos (&&, ||).
+            </p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Estruturas de Seleção e Repetição</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Seleção:</strong> <code>if/else</code> e
+              <code>switch/case</code>.
+            </p>
+            <p>
+              <strong>Repetição:</strong> <code>for</code>, <code>while</code> e
+              <code>do/while</code>.
+            </p>
+            <pre><code>for (int i = 1; i <= 5; i++) {
+    System.out.println("Contagem: " + i);
+}</code></pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>Vetores (Arrays)</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> Estrutura de tamanho FIXO. Índice
+              começa em 0.
+            </p>
+            <pre><code>int[] numeros = new int[3];
+numeros[0] = 10;
+System.out.println(numeros[0]);</code></pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>Funções e Passagem de Parâmetros</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Conceito:</strong> Métodos com <code>void</code> (não
+              retornam) ou com tipo de retorno (int, String, etc).
+            </p>
+            <pre><code>public int somar(int a, int b) {
+    return a + b;
+}</code></pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>Collections, Autoboxing e Ordenação</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Collections:</strong> Listas dinâmicas como
+              <code>ArrayList</code>.
+            </p>
+            <pre><code>ArrayList&lt;String&gt; nomes = new ArrayList&lt;&gt;();
+nomes.add("Zeca");
+Collections.sort(nomes);</code></pre>
+          </div>
+        </details>
+
+        <details>
+          <summary>Versionamento de Código (Git)</summary>
+          <div class="conteudo-unidade">
+            <p>
+              <strong>Comandos:</strong> <code>git init</code>,
+              <code>git add .</code>, <code>git commit -m "msg"</code>,
+              <code>git push</code>.
+            </p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Conexão com Banco de Dados (JDBC)</summary>
+          <div class="conteudo-unidade">
+            <pre><code>String url = "jdbc:mysql://localhost:3306/meubanco";
+Connection conexao = DriverManager.getConnection(url, "root", "123");</code></pre>
+          </div>
+        </details>
+      </div>
+    </main>
+
+    <footer>
+      <p class="frase-motivacional">
+        "Escreva uma vez, rode em qualquer lugar. O domínio do Java abre portas
+        para o mundo."
+      </p>
+    </footer>
+  </body>
+</html>

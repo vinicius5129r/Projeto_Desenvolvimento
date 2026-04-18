@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio de Estudos</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Meus Estudos</h1>
+      <p>Minha colinha pessoal de matérias.</p>
+      <input
+        type="text"
+        id="barraPesquisa"
+        placeholder="Pesquisar matéria..."
+      />
+    </header>
+
+    <main>
+      <div class="grid-materias" id="containerMaterias">
+        <a href="web.html" class="link-cartao">
+          <div class="cartao-materia">
+            <h2>Fundamentos Web</h2>
+            <p>
+              Base teórica e prática sobre a web, estruturação com HTML e
+              estilização com CSS.
+            </p>
+            <div class="btn-acessar">Acessar Matéria ➔</div>
+          </div>
+        </a>
+
+        <a href="poo.html" class="link-cartao">
+          <div class="cartao-materia">
+            <h2>Programação Orientada a Objetos</h2>
+            <p>
+              Paradigma focado em representar o mundo real através de Objetos e
+              Classes.
+            </p>
+            <div class="btn-acessar">Acessar Matéria ➔</div>
+          </div>
+        </a>
+
+        <a href="banco-de-dados.html" class="link-cartao">
+          <div class="cartao-materia">
+            <h2>Banco de Dados I</h2>
+            <p>
+              Fundamentos de armazenamento, modelagem e aprofundamento em
+              comandos SQL.
+            </p>
+            <div class="btn-acessar">Acessar Matéria ➔</div>
+          </div>
+        </a>
+
+        <a href="logica.html" class="link-cartao">
+          <div class="cartao-materia">
+            <h2>Lógica de Programação</h2>
+            <p>
+              A base do raciocínio computacional. Criação de algoritmos,
+              variáveis e laços.
+            </p>
+            <div class="btn-acessar">Acessar Matéria ➔</div>
+          </div>
+        </a>
+
+        <a href="java.html" class="link-cartao">
+          <div class="cartao-materia">
+            <h2>Linguagem de Programação</h2>
+            <p>
+              Aprofundamento na linguagem Java, estruturas de controle, coleções
+              e JDBC.
+            </p>
+            <div class="btn-acessar">Acessar Matéria ➔</div>
+          </div>
+        </a>
+
+        <a href="redes.html" class="link-cartao">
+          <div class="cartao-materia">
+            <h2>Redes de Computadores I</h2>
+            <p>
+              Fundamentos de infraestrutura, topologias, cabeamento e modelos
+              OSI e TCP/IP.
+            </p>
+            <div class="btn-acessar">Acessar Matéria ➔</div>
+          </div>
+        </a>
+      </div>
+    </main>
+
+    <footer>
+      <h2>Projeto em Construção</h2>
+      <p>Sempre adicionando novos conhecimentos!</p>
+      <br />
+      <p>Criado com dedicação por:</p>
+      <div class="rodape-autores">
+        <a
+          href="https://instagram.com/ana_randly"
+          target="_blank"
+          class="link-insta"
+          >Anaclara</a
+        >
+        <a
+          href="https://instagram.com/vinicius_ramos_19"
+          target="_blank"
+          class="link-insta"
+          >José Vinícius</a
+        >
+        <a
+          href="https://instagram.com/juliana44922"
+          target="_blank"
+          class="link-insta"
+          >Juliana Pacheco</a
+        >
+        <a
+          href="https://instagram.com/maisa_mids"
+          target="_blank"
+          class="link-insta"
+          >Maísa Mayara</a
+        >
+      </div>
+    </footer>
+
+    <script>
+      const barraPesquisa = document.getElementById("barraPesquisa");
+      const cartoes = document.getElementsByClassName("link-cartao");
+
+      barraPesquisa.addEventListener("input", function () {
+        let textoPesquisa = barraPesquisa.value.toLowerCase();
+        for (let i = 0; i < cartoes.length; i++) {
+          let conteudoCartao = cartoes[i].innerText.toLowerCase();
+          if (conteudoCartao.includes(textoPesquisa)) {
+            cartoes[i].style.display = "block";
+          } else {
+            cartoes[i].style.display = "none";
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
